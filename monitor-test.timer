@@ -1,0 +1,12 @@
+[Unit]
+Description=Run monitor-test every minute
+Requires=monitor-test.service
+
+[Timer]
+OnBootSec=1min
+OnCalendar=*:*:00
+AccuracySec=1s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Monitor test process
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/spet/monitor-test/monitor_test.sh
+User=root
+StandardOutput=journal
+StandardError=journal
